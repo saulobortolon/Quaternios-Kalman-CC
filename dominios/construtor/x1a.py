@@ -298,7 +298,7 @@ Em toda a série, o estado de um objeto em movimento vai viver num "domínio" co
 
 Como se vê, $\boxplus$ é composto de `compoe` e `Exp`: $x\boxplus\delta=$ `compoe(x, Exp(δ))`. É a mesma operação $\boxplus$ dos notebooks 5 e 6 da série Kalman. Nos próximos domínios, a coluna da direita fica cada vez mais interessante:
 
-| domínio | $x\boxplus\delta$ |
+| domínio | --------$x\boxplus\delta$ --------- |
 |---|---|
 | ℝ, ℝ² | $x+\delta$ |
 | duais | $(\theta+\delta_\theta)+\varepsilon(d+\delta_d)$ |
