@@ -348,7 +348,7 @@ c.md(r"""
 3. **Jacobianos por números duais tiram a dedução do caminho.** Os olhos de Pepé têm um modelo com tangentes e quocientes; o EKF usou o jacobiano exato sem uma linha de derivada escrita à mão. Para mudar o sensor, basta mudar `h_olhos`.
 4. **Sensores precisos e estreitos combinam com sensores grosseiros e largos.** Os olhos dão precisão; a câmera do teto, mesmo a 1 Hz, dá a garantia de reencontrar Penélope.
 
-**Próximo domínio:** os números complexos. A rotação deixa de ser um ângulo que se enrola e passa a ser um **número** de módulo 1, $e^{i\theta}$, que se compõe por multiplicação: o enrolamento desaparece da álgebra, porque $e^{i(\theta+2\pi)}=e^{i\theta}$ automaticamente.
+**Próximo domínio:** os números complexos (LINK_X4). A rotação deixa de ser um ângulo que se enrola e passa a ser um **número** de módulo 1, $e^{i\theta}$, que se compõe por multiplicação: o enrolamento desaparece da álgebra, porque $e^{i(\theta+2\pi)}=e^{i\theta}$ automaticamente.
 
 ---
 ## 8. Exercícios
@@ -358,6 +358,6 @@ c.md(r"""
 3. **IEKF nos olhos.** Implemente a correção iterada (notebook I(d)) para os olhos. Ela muda alguma coisa quando Penélope está perto da borda do campo de visão, onde a tangente é mais curva?
 4. **Ângulo absoluto nos olhos.** Suponha que os olhos de Pepé medem $\Delta$ diretamente (um sensor de direção), e não $\tan\Delta$. O jacobiano fica trivial. O filtro melhora ou piora? Por quê?
 5. **Penélope que dá voltas.** Aumente a força aleatória horizontal para 4 N, para que Penélope dê mais voltas. Como mudam as diferenças entre a inovação ingênua e a com $\boxminus$?
-""")
+""".replace("LINK_X4", link(arquivo("4"), "nó do domínio IV")))
 
 c.salva()

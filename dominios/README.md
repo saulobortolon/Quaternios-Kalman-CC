@@ -16,7 +16,7 @@ A mesma história é contada em oito domínios de números, cada um mais rico qu
 | I | números reais ℝ | **pronto** |
 | II | vetores de ℝ² | **pronto** |
 | III | números duais | **pronto** |
-| IV | números complexos ℂ | em preparação |
+| IV | números complexos ℂ | **pronto** |
 | V | números dual-complexos | em preparação |
 | VI | quaternions | em preparação |
 | VII | dual quaternions | em preparação |
@@ -37,7 +37,7 @@ notebooks/     os notebooks, já executados (figuras e resultados incluídos)
 construtor/    o código que GERA os notebooks
   comum.py       funções comuns, lista de domínios e etapas, células de ferramentas
   x0.py, x1.py, ...    a raiz e o nó de cada domínio
-  x1a.py ... x3d.py    as folhas (domínio N, etapas a–d)
+  x1a.py ... x4d.py    as folhas (domínio N, etapas a–d)
   build.py       gera e executa tudo:  python build.py   (ou  python build.py x1c  para um só)
 ```
 

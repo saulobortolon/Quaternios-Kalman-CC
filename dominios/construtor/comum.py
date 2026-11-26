@@ -37,7 +37,7 @@ ETAPAS = [
     ("c", "edo", "cinemática e dinâmica: equações diferenciais"),
     ("d", "perseguicao", "perseguição com filtro de Kalman"),
 ]
-PRONTOS = {"1", "2", "3"}          # domínios já escritos
+PRONTOS = {"1", "2", "3", "4"}          # domínios já escritos
 
 def arquivo(dom=None, etapa=None):
     if dom is None:
@@ -128,7 +128,9 @@ plt.rcParams.update({"axes.grid": True, "grid.alpha": 0.3, "figure.dpi": 100,
 
 def confere(nome, obtido, esperado, tol=1e-9, relativo=False):
     """Compara duas quantidades. Imprime OK ou interrompe o notebook com uma mensagem clara."""
-    a, b = np.asarray(obtido, dtype=float), np.asarray(esperado, dtype=float)
+    a, b = np.asarray(obtido), np.asarray(esperado)
+    tipo = complex if (np.iscomplexobj(a) or np.iscomplexobj(b)) else float      # aceita complexos (domínio IV)
+    a, b = a.astype(tipo), b.astype(tipo)
     escala = max(np.max(np.abs(b)), 1e-300) if relativo else 1.0
     erro = float(np.max(np.abs(a - b)) / escala)
     ok = erro <= tol
