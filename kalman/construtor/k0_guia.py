@@ -366,7 +366,7 @@ As duas séries se ajudam nos dois sentidos:
 - a série *Domínios* dá a **base numérica** que esta série supõe sem dizer: ponto flutuante, condicionamento, Newton e Gauss–Newton, Runge–Kutta, discretização exata de $Q$;
 - esta série dá a **teoria dos filtros** que a etapa (d) de cada domínio usa em miniatura.
 
-Hoje só o domínio I (números reais) está pronto; as linhas abaixo crescem com a série.
+Hoje estão prontos os domínios I (números reais) e II (vetores do plano); as linhas abaixo crescem com a série.
 
 | notebook desta série | ponte na série *Domínios* | o que liga os dois |
 |---|---|---|
@@ -377,6 +377,10 @@ Hoje só o domínio I (números reais) está pronto; as linhas abaixo crescem co
 | 5. notas de Im ($\boxplus$, filtro numa grade, ruído de processo) | [X1a](../../dominios/notebooks/X1a_reais_algebra.ipynb) ([Colab](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/dominios/notebooks/X1a_reais_algebra.ipynb)), [X1c](../../dominios/notebooks/X1c_reais_edo.ipynb) ([Colab](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/dominios/notebooks/X1c_reais_edo.ipynb)) | $\boxplus$ = compor com $\operatorname{Exp}$ (trivial em ℝ); $F$, $G$ e $Q$ exatos pelo método de Van Loan |
 | 6. quadrotor (quaternions, dual quaternions, tridentes; RK e grupos de Lie) | [X1c](../../dominios/notebooks/X1c_reais_edo.ipynb) ([Colab](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/dominios/notebooks/X1c_reais_edo.ipynb)); depois os domínios VI, VII e VIII | Runge–Kutta em ℝ e a passagem para RKMK, que integra no grupo |
 | todos (ponto flutuante, `confere` com tolerância) | [X1a](../../dominios/notebooks/X1a_reais_algebra.ipynb) ([Colab](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/dominios/notebooks/X1a_reais_algebra.ipynb)) | por que as conferências usam tolerâncias: associatividade que falha, cancelamento, soma de Kahan |
+| 3. Pepé, Parte 1 (gradiente do cheiro, sensores que se completam) | [X2d](../../dominios/notebooks/X2d_vetores2d_perseguicao.ipynb) ([Colab](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/dominios/notebooks/X2d_vetores2d_perseguicao.ipynb)) | no plano, a intensidade só diz a distância e o gradiente confunde perto com longe; juntos, o EKF não perde Penélope |
+| 4. IMM (várias hipóteses ao mesmo tempo) | [X2d](../../dominios/notebooks/X2d_vetores2d_perseguicao.ipynb) ([Colab](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/dominios/notebooks/X2d_vetores2d_perseguicao.ipynb)) | o filtro de partículas carrega várias hipóteses de posição; ajuda com a ambiguidade discreta (perto/longe), não com a contínua (o círculo) |
+| 5. notas de Im (predição do EKF, $\mathbf J\mathbf P\mathbf J^\top$) | [X2c](../../dominios/notebooks/X2c_vetores2d_edo.ipynb) ([Colab](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/dominios/notebooks/X2c_vetores2d_edo.ipynb)) | a incerteza de um lançamento: elipse linearizada contra Monte Carlo, e a "banana" quando a incerteza cresce |
+| 1 (mínimos quadrados, Gauss–Newton) | [X2b](../../dominios/notebooks/X2b_vetores2d_sistemas.ipynb) ([Colab](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/dominios/notebooks/X2b_vetores2d_sistemas.ipynb)) | trilateração com Gauss–Newton na cota $\sigma^2(\mathbf J^\top\mathbf J)^{-1}$, GDOP, e o reflexo que ela não vê |
 """)
 
 md(r"""
