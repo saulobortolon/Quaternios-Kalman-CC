@@ -101,15 +101,15 @@ c.md(f"""
 **No Colab, sem instalar nada.** Cada notebook tem, no topo, um botão "Abrir no Colab", e a matriz da seção 1 tem um link "Colab" em cada célula. Os notebooks são **autossuficientes**: cada um repete, numa célula inicial de ferramentas, o pouco que precisa das etapas anteriores, e roda sozinho.
 
 **O repositório.** Todos os arquivos estão em [github.com/{REPO}](https://github.com/{REPO}):
-- `notebooks/`: os notebooks, já executados (com figuras e resultados);
-- `construtor/`: o código Python que **gera** os notebooks. Os notebooks não são editados à mão: cada correção é feita no construtor, e a série inteira é regenerada e reexecutada.
+- `dominios/notebooks/`: os notebooks desta série, já executados (com figuras e resultados);
+- `dominios/construtor/`: o código Python que **gera** os notebooks. Os notebooks não são editados à mão: cada correção é feita no construtor, e a série inteira é regenerada e reexecutada.
 
 **Convenções**
 - Toda afirmação numérica importante é conferida por uma célula que imprime `OK` (ou interrompe o notebook com uma mensagem clara).
 - As simulações de Monte Carlo têm um parâmetro `N_MC` no topo do notebook: diminua-o para rodar mais rápido em aula.
 - As leituras dos resultados ("**Leitura.**") foram escritas a partir dos números obtidos, e dizem o que os números dizem, inclusive quando contrariam a expectativa.
 
-**A série irmã.** *O Filtro de Kalman para Cientistas da Computação* (guia, Pepé Le Gambá, IMM, notas de Im, quadrotor) está na [pasta do Google Drive](https://drive.google.com/drive/folders/1dtp9t1VQoMD-0hpIQoRVyFf0MT8C0M0f?usp=sharing).
+**A série irmã.** *O Filtro de Kalman para Cientistas da Computação* (Pepé Le Gambá, IMM, notas de Im, quadrotor) está no mesmo repositório, na pasta `kalman/`. Comece pelo guia: {kalman(GUIA_KALMAN, "guia da série Kalman")}. As duas séries se cruzam: cada nó de domínio desta série tem uma seção "Para quem vem da série Kalman", e o guia da série Kalman tem uma tabela de pontes para cá.
 """)
 
 c.md(r"""
