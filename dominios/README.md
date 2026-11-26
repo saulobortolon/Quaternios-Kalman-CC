@@ -15,7 +15,7 @@ A mesma história é contada em oito domínios de números, cada um mais rico qu
 |---|---|---|
 | I | números reais ℝ | **pronto** |
 | II | vetores de ℝ² | **pronto** |
-| III | números duais | em preparação |
+| III | números duais | **pronto** |
 | IV | números complexos ℂ | em preparação |
 | V | números dual-complexos | em preparação |
 | VI | quaternions | em preparação |
@@ -36,8 +36,8 @@ Cada notebook é autossuficiente e roda sozinho no Colab, sem instalar nada.
 notebooks/     os notebooks, já executados (figuras e resultados incluídos)
 construtor/    o código que GERA os notebooks
   comum.py       funções comuns, lista de domínios e etapas, células de ferramentas
-  x0.py, x1.py, x2.py   a raiz e o nó de cada domínio
-  x1a.py ... x2d.py      as folhas (domínio N, etapas a–d)
+  x0.py, x1.py, ...    a raiz e o nó de cada domínio
+  x1a.py ... x3d.py    as folhas (domínio N, etapas a–d)
   build.py       gera e executa tudo:  python build.py   (ou  python build.py x1c  para um só)
 ```
 

@@ -366,7 +366,7 @@ As duas séries se ajudam nos dois sentidos:
 - a série *Domínios* dá a **base numérica** que esta série supõe sem dizer: ponto flutuante, condicionamento, Newton e Gauss–Newton, Runge–Kutta, discretização exata de $Q$;
 - esta série dá a **teoria dos filtros** que a etapa (d) de cada domínio usa em miniatura.
 
-Hoje estão prontos os domínios I (números reais) e II (vetores do plano); as linhas abaixo crescem com a série.
+Hoje estão prontos os domínios I (números reais), II (vetores do plano) e III (números duais); as linhas abaixo crescem com a série.
 
 | notebook desta série | ponte na série *Domínios* | o que liga os dois |
 |---|---|---|
@@ -381,6 +381,9 @@ Hoje estão prontos os domínios I (números reais) e II (vetores do plano); as 
 | 4. IMM (várias hipóteses ao mesmo tempo) | [X2d](../../dominios/notebooks/X2d_vetores2d_perseguicao.ipynb) ([Colab](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/dominios/notebooks/X2d_vetores2d_perseguicao.ipynb)) | o filtro de partículas carrega várias hipóteses de posição; ajuda com a ambiguidade discreta (perto/longe), não com a contínua (o círculo) |
 | 5. notas de Im (predição do EKF, $\mathbf J\mathbf P\mathbf J^\top$) | [X2c](../../dominios/notebooks/X2c_vetores2d_edo.ipynb) ([Colab](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/dominios/notebooks/X2c_vetores2d_edo.ipynb)) | a incerteza de um lançamento: elipse linearizada contra Monte Carlo, e a "banana" quando a incerteza cresce |
 | 1 (mínimos quadrados, Gauss–Newton) | [X2b](../../dominios/notebooks/X2b_vetores2d_sistemas.ipynb) ([Colab](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/dominios/notebooks/X2b_vetores2d_sistemas.ipynb)) | trilateração com Gauss–Newton na cota $\sigma^2(\mathbf J^\top\mathbf J)^{-1}$, GDOP, e o reflexo que ela não vê |
+| 3 e 5 (jacobianos: à mão, diferenças finitas, passo complexo) | [X3a](../../dominios/notebooks/X3a_duais_algebra.ipynb) ([Colab](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/dominios/notebooks/X3a_duais_algebra.ipynb)), [X3b](../../dominios/notebooks/X3b_duais_sistemas.ipynb) ([Colab](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/dominios/notebooks/X3b_duais_sistemas.ipynb)) | números duais: a derivada exata de um programa, e jacobianos automáticos para Newton e Gauss–Newton |
+| 5 e 6 ($\boxplus$, $\boxminus$, estado de erro) | [X3d](../../dominios/notebooks/X3d_duais_perseguicao.ipynb) ([Colab](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/dominios/notebooks/X3d_duais_perseguicao.ipynb)) | o caso mais simples de um estado que não é vetor: o ângulo que dá a volta, com $\boxminus$ na inovação e no controle |
+| 6 (dual quaternions) | [X3a](../../dominios/notebooks/X3a_duais_algebra.ipynb) ([Colab](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/dominios/notebooks/X3a_duais_algebra.ipynb)), [X3c](../../dominios/notebooks/X3c_duais_edo.ipynb) ([Colab](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/dominios/notebooks/X3c_duais_edo.ipynb)) | o ângulo dual $\theta+\varepsilon d$, o parafuso e o princípio da transferência |
 """)
 
 md(r"""

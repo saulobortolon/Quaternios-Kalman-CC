@@ -131,7 +131,7 @@ A etapa (d) deste domínio é o "Pepé Le Gambá" no plano, mais perto do origin
 - a "banana" da etapa (c) é a razão de ser do estado de erro e do $\\boxplus$, que o {K5} e o {K6} usam com rotações;
 - o filtro de partículas carrega várias hipóteses ao mesmo tempo, como o IMM do {K4} carrega vários modos.
 
-**Domínio anterior:** {link(arquivo("1"), "ℝ, a reta")}. **Próximo domínio:** os números duais.
+**Domínio anterior:** {link(arquivo("1"), "ℝ, a reta")}. **Próximo domínio:** {link(arquivo("3"), "os números duais")}.
 """)
 
 c.salva()

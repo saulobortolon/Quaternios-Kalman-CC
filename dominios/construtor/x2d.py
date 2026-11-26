@@ -535,7 +535,7 @@ E a coluna "dentro da elipse de 95%" lembra a outra lição do corredor: o filtr
 4. **O filtro de partículas não precisa de jacobianos,** só de avaliar o modelo do sensor; em troca, custa muito mais e precisa de cuidados numéricos (pesos em logaritmo, reamostragem).
 5. **O plano é ainda "duas retas" para o movimento,** mas não para as medidas: a distância e a direção misturam as coordenadas, e é aí que mora a dificuldade.
 
-**Próximo domínio:** os números duais. Um infinitesimal $\varepsilon$, com $\varepsilon^2=0$, faz duas coisas ao mesmo tempo: descreve uma barra que gira e desliza no mesmo eixo, e calcula **derivadas exatas** sem `sympy` e sem diferenças finitas. Os jacobianos da seção 2, conferidos aqui por diferenças finitas, sairão de graça.
+**Próximo domínio:** os números duais (LINK_X3). Um infinitesimal $\varepsilon$, com $\varepsilon^2=0$, faz duas coisas ao mesmo tempo: descreve uma barra que gira e desliza no mesmo eixo, e calcula **derivadas exatas** sem `sympy` e sem diferenças finitas. Os jacobianos da seção 2, conferidos aqui por diferenças finitas, sairão de graça.
 
 ---
 ## 9. Exercícios
@@ -545,6 +545,6 @@ E a coluna "dentro da elipse de 95%" lembra a outra lição do corredor: o filtr
 3. **Quantas partículas?** Refaça a configuração "intensidade + gradiente + partículas" com 200, 500, 2000 e 10 000 partículas. Meça o erro mediano, a cobertura da elipse de 95% e o tempo. A cobertura abaixo de 95% indica um problema conhecido dos filtros de partículas com sensores muito precisos (o **empobrecimento** da amostra); procure o que é *roughening* e experimente.
 4. **IEKF no gradiente.** Implemente a correção iterada (Gauss–Newton, notebook I(d)) para o gradiente sozinho. Ela evita os saltos para a distância gêmea?
 5. **A grade no plano.** Estime o tempo e a memória de um filtro em grade para esta arena, com a resolução do notebook I(d) (10 cm em posição, 0,25 m/s em velocidade). Compare com o filtro de partículas de 2000 partículas.
-""")
+""".replace("LINK_X3", link(arquivo("3"), "nó do domínio III")))
 
 c.salva()
