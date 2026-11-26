@@ -396,7 +396,7 @@ c.md(r"""
 """)
 
 # ----------------------------------------------------------- 7
-c.md(r"""
+c.md(rf"""
 ---
 ## 7. O que levar deste notebook
 
@@ -406,7 +406,7 @@ c.md(r"""
 4. **Um filtro confiante ignora quem discorda dele.** A covariância pequena, depois da troca de lado, fez a régua grosseira parecer ruído.
 5. **Mire na moda, não na média,** quando a crença pode ter várias corcovas.
 
-**Próximo domínio:** ℝ², o plano. Pepé e Penélope ganham mais uma direção, o olfato vira um gradiente, e a ambiguidade de "lado" vira uma ambiguidade de "direção".
+**Próximo domínio:** ℝ², o plano ({link(arquivo("2"), "nó do domínio II")}). Pepé e Penélope ganham mais uma direção, o olfato vira um gradiente, e a ambiguidade de "lado" vira uma ambiguidade de "direção".
 
 ---
 ## 8. Exercícios

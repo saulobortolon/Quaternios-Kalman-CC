@@ -98,7 +98,7 @@ resumo = {
 linhas = []
 for e, slug, titulo in ETAPAS:
     arq = arquivo("1", e)
-    linhas.append(f"### ({e}) {titulo.capitalize()}\n{link(arq)}\n\n{resumo[e]}\n")
+    linhas.append(f"### ({e}) {titulo[0].upper() + titulo[1:]}\n{link(arq)}\n\n{resumo[e]}\n")
 c.md("\n".join(linhas))
 
 K1 = kalman("mq_hmm_kalman_duas_trilhas.ipynb", "notebook 1")
@@ -115,7 +115,7 @@ A etapa (d) deste domínio é o "Pepé Le Gambá" reduzido a uma dimensão. Ela 
 - mirar onde a presa estará ({K4});
 - o excesso de confiança medido pelo NEES ({K3}).
 
-**Próximo domínio:** ℝ², o plano.
+**Próximo domínio:** {link(arquivo("2"), "ℝ², o plano")}.
 """)
 
 c.salva()

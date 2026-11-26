@@ -37,7 +37,7 @@ ETAPAS = [
     ("c", "edo", "cinemática e dinâmica: equações diferenciais"),
     ("d", "perseguicao", "perseguição com filtro de Kalman"),
 ]
-PRONTOS = {"1"}          # domínios já escritos
+PRONTOS = {"1", "2"}          # domínios já escritos
 
 def arquivo(dom=None, etapa=None):
     if dom is None:
