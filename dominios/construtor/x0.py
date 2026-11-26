@@ -83,7 +83,7 @@ c.md(r"""
 
 Em todos os domínios, o estado de um objeto em movimento vive num conjunto com seis operações: compor dois movimentos, inverter um movimento, a identidade, $\mathrm{Exp}$ (o movimento produzido por uma velocidade constante), $\mathrm{Log}$ (a velocidade que produz um movimento), e o par $\boxplus$, $\boxminus$ (somar e medir incrementos pequenos). A etapa (a) de cada domínio implementa a interface e roda **os mesmos testes**.
 
-| domínio | $x\boxplus\delta$ | integrador da etapa (c) | filtro da etapa (d) |
+| domínio | --------$x\boxplus\delta$ --------- | --------- integrador da etapa (c)---------  |--------- filtro da etapa (d)--------- |
 |---|---|---|---|
 | ℝ, ℝ² | $x+\delta$ | RK4 | KF, EKF, IEKF, filtro em grade |
 | duais | $(\theta+\delta_\theta)+\varepsilon(d+\delta_d)$ | RK4 | EKF com jacobianos por números duais |
