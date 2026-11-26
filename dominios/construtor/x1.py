@@ -101,15 +101,19 @@ for e, slug, titulo in ETAPAS:
     linhas.append(f"### ({e}) {titulo.capitalize()}\n{link(arq)}\n\n{resumo[e]}\n")
 c.md("\n".join(linhas))
 
-c.md(r"""
+K1 = kalman("mq_hmm_kalman_duas_trilhas.ipynb", "notebook 1")
+K3 = kalman("pepe_kalman_parte1_ekf_iekf.ipynb", "notebook 3")
+K4 = kalman("pepe_kalman_parte2_imm.ipynb", "notebook 4")
+K5 = kalman("kalman_notas_im_kf_ekf_eskf_iekf_ieskf.ipynb", "notebook 5")
+c.md(f"""
 ---
 ## Para quem vem da série Kalman
 
-A etapa (d) deste domínio é o "Pepé Le Gambá" reduzido a uma dimensão. Ela reaproveita, em miniatura, ideias de quatro notebooks daquela série:
-- o filtro de Bayes numa grade (notebook 5, seção 2);
-- o IEKF de Bell e Cathey (notebooks 1, 3 e 5);
-- mirar onde a presa estará (notebook 4);
-- o excesso de confiança medido pelo NEES (notebook 3).
+A etapa (d) deste domínio é o "Pepé Le Gambá" reduzido a uma dimensão. Ela reaproveita, em miniatura, ideias de quatro notebooks daquela série (no mesmo repositório, pasta `kalman/`):
+- o filtro de Bayes numa grade ({K5}, seção 2);
+- o IEKF de Bell e Cathey ({K1}, {K3} e {K5});
+- mirar onde a presa estará ({K4});
+- o excesso de confiança medido pelo NEES ({K3}).
 
 **Próximo domínio:** ℝ², o plano.
 """)

@@ -1,52 +1,24 @@
 # Quaternios-Kalman-CC
 
-**Números, movimento e Kalman: de ℝ aos quaternions tridentes.** Série de notebooks para alunos de Ciência da Computação, criada por Saulo Bortolon em parceria com Claude.
+Duas séries de notebooks para alunos de Ciência da Computação, criadas por Saulo Bortolon em parceria com Claude. Todos rodam no Google Colab sem instalar nada.
 
-A mesma história é contada em oito domínios de números, cada um mais rico que o anterior. Em cada domínio, quatro etapas:
+## As duas séries
 
-| etapa | conteúdo |
-|---|---|
-| (a) álgebra | operações, propriedades que valem e que se perdem, implementação em Python (com `sympy`) |
-| (b) sistemas | equações lineares e não lineares no domínio |
-| (c) EDOs | cinemática e dinâmica ($F=ma$), solução simbólica (`sympy`) e numérica (Runge–Kutta, RKMK) |
-| (d) perseguição | um perseguidor estima a posição de um alvo com um filtro de Kalman, a partir de sensores com ruído |
+**[O Filtro de Kalman para Cientistas da Computação](kalman/)**: do Kalman como aprendizado online (mínimos quadrados e HMM) ao EKF, ao Kalman iterado, ao IMM, ao ESKF/IESKF e a um quadrotor com quaternions tridentes. Personagens: Pepé Le Gambá e Penélope.
+Comece pelo guia: [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/kalman/notebooks/kalman_guia_da_serie.ipynb)
 
-| | domínio | estado |
-|---|---|---|
-| I | números reais ℝ | **pronto** |
-| II | vetores de ℝ² | em preparação |
-| III | números duais | em preparação |
-| IV | números complexos ℂ | em preparação |
-| V | números dual-complexos | em preparação |
-| VI | quaternions | em preparação |
-| VII | dual quaternions | em preparação |
-| VIII | quaternions tridentes | em preparação |
+**[Números, movimento e Kalman: de ℝ aos quaternions tridentes](dominios/)**: a mesma história contada em oito domínios de números (ℝ, ℝ², duais, complexos, dual-complexos, quaternions, dual quaternions, tridentes), cada um em quatro etapas: álgebra, sistemas de equações, EDOs e uma perseguição com Kalman. Domínio I (números reais) pronto.
+Comece pela raiz: [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/dominios/notebooks/X0_raiz.ipynb)
 
-## Por onde começar
+## Como as séries se ligam
 
-Abra [`notebooks/X0_raiz.ipynb`](notebooks/X0_raiz.ipynb), ou diretamente no Colab:
-
-[![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/notebooks/X0_raiz.ipynb)
-
-Cada notebook é autossuficiente e roda sozinho no Colab, sem instalar nada.
+A série *Domínios* dá a base numérica (ponto flutuante, condicionamento, Newton e Gauss–Newton, Runge–Kutta e RKMK, discretização exata do ruído) que a série Kalman supõe; a série Kalman dá a teoria dos filtros que a etapa (d) de cada domínio usa em miniatura. O guia da série Kalman (seção 7) tem a tabela de pontes, e cada nó de domínio tem uma seção "Para quem vem da série Kalman".
 
 ## Estrutura
 
 ```
-notebooks/     os notebooks, já executados (figuras e resultados incluídos)
-construtor/    o código que GERA os notebooks
-  comum.py       funções comuns, lista de domínios e etapas, células de ferramentas
-  x0.py, x1.py   a raiz e o nó de cada domínio
-  x1a.py ...     as folhas (domínio 1, etapas a–d)
-  build.py       gera e executa tudo:  python build.py   (ou  python build.py x1c  para um só)
+kalman/      notebooks, construtor, vídeos e fontes da série Kalman
+dominios/    notebooks e construtor da série Domínios
 ```
 
-Os notebooks **não são editados à mão**. Cada correção é feita no construtor, e a série é regenerada e reexecutada. Toda afirmação numérica importante é conferida por uma célula que imprime `OK`.
-
-## Requisitos para regenerar
-
-Python 3.10+, `numpy`, `scipy`, `matplotlib`, `sympy`, `pandas`, `nbformat`, `nbconvert`, `jupyter`.
-
-## Série irmã
-
-*O Filtro de Kalman para Cientistas da Computação* (Pepé Le Gambá, IMM, notas de Im, quadrotor com quaternions tridentes): [pasta no Google Drive](https://drive.google.com/drive/folders/1dtp9t1VQoMD-0hpIQoRVyFf0MT8C0M0f?usp=sharing).
+Em cada série, a pasta `notebooks/` tem os notebooks já executados e a pasta `construtor/` tem o código Python que os gera. Os notebooks não são editados à mão: cada correção é feita no construtor, e a série é regenerada e reexecutada (`python build.py` dentro de `construtor/`).

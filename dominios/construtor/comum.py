@@ -8,8 +8,8 @@ import os, re
 import nbformat as nbf
 
 REPO = "saulobortolon/Quaternios-Kalman-CC"
-PASTA_NB = "notebooks"
-SAIDA = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", PASTA_NB)
+PASTA_NB = "dominios/notebooks"
+SAIDA = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "notebooks")
 
 # ------------------------------------------------------------------ a série
 DOMINIOS = [
@@ -54,6 +54,16 @@ def colab(arq):
 def link(arq, texto=None):
     """Link relativo (Jupyter, GitHub) mais o atalho para o Colab."""
     return f"[{texto or arq}]({arq}) ([Colab]({colab(arq)}))"
+
+# a série irmã (Kalman para Cientistas da Computação), no mesmo repositório
+PASTA_KALMAN = "kalman/notebooks"
+GUIA_KALMAN = "kalman_guia_da_serie.ipynb"
+
+def kalman(arq, texto=None):
+    """Link para um notebook da série Kalman: relativo (Jupyter, GitHub) mais o atalho para o Colab."""
+    rel = f"../../{PASTA_KALMAN}/{arq}"
+    url = f"https://colab.research.google.com/github/{REPO}/blob/main/{PASTA_KALMAN}/{arq}"
+    return f"[{texto or arq}]({rel}) ([Colab]({url}))"
 
 def selo(arq):
     return f'<a href="{colab(arq)}" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Abrir no Colab"/></a>'
