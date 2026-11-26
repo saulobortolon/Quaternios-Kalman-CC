@@ -4,7 +4,7 @@ AQUI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, AQUI)
 os.chdir(AQUI)
 
-TODOS = ["x1a", "x1b", "x1c", "x1d", "x1", "x2a", "x2b", "x2c", "x2d", "x2", "x0"]   # a raiz por último: a verificação dela procura os outros
+TODOS = ["x1a", "x1b", "x1c", "x1d", "x1", "x2a", "x2b", "x2c", "x2d", "x2", "x3a", "x3b", "x3c", "x3d", "x3", "x0"]   # a raiz por último: a verificação dela procura os outros
 alvo = sys.argv[1:] or TODOS
 executar = os.environ.get("EXECUTAR", "1") == "1"
 
