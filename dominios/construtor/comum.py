@@ -37,7 +37,7 @@ ETAPAS = [
     ("c", "edo", "cinemática e dinâmica: equações diferenciais"),
     ("d", "perseguicao", "perseguição com filtro de Kalman"),
 ]
-PRONTOS = {"1", "2", "3", "4"}          # domínios já escritos
+PRONTOS = {"1", "2", "3", "4", "5"}          # domínios já escritos
 
 def arquivo(dom=None, etapa=None):
     if dom is None:
@@ -47,6 +47,16 @@ def arquivo(dom=None, etapa=None):
         return f"X{dom}_{nome}.ipynb"
     sufixo = [e for e in ETAPAS if e[0] == etapa][0][1]
     return f"X{dom}{etapa}_{nome}_{sufixo}.ipynb"
+
+def apendice(dom, slug):
+    """Notebooks extras de um domínio (aplicações fora da sequência a–d)."""
+    return f"X{dom}_ap_{slug}.ipynb"
+
+APENDICES = {                                   # domínio → [(slug, título curto)]
+    "5": [("slam", "SLAM por grafo de poses"), ("quatrobarras", "quatro barras"), ("carro", "odometria de um carro"),
+          ("curling", "curling"), ("robocup", "futebol de robôs"), ("estilingue", "estilingue gravitacional"),
+          ("trelica", "treliça de ponte")],
+}
 
 def colab(arq):
     return f"https://colab.research.google.com/github/{REPO}/blob/main/{PASTA_NB}/{arq}"

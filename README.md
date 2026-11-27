@@ -7,7 +7,7 @@ Duas séries de notebooks para alunos de Ciência da Computação, criadas por S
 **[O Filtro de Kalman para Cientistas da Computação](kalman/)**: do Kalman como aprendizado online (mínimos quadrados e HMM) ao EKF, ao Kalman iterado, ao IMM, ao ESKF/IESKF e a um quadrotor com quaternions tridentes. Personagens: Pepé Le Gambá e Penélope.
 Comece pelo guia: [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/kalman/notebooks/kalman_guia_da_serie.ipynb)
 
-**[Números, movimento e Kalman: de ℝ aos quaternions tridentes](dominios/)**: a mesma história contada em oito domínios de números (ℝ, ℝ², duais, complexos, dual-complexos, quaternions, dual quaternions, tridentes), cada um em quatro etapas: álgebra, sistemas de equações, EDOs e uma perseguição com Kalman. Domínios I a IV (reais, vetores do plano, duais e complexos) prontos.
+**[Números, movimento e Kalman: de ℝ aos quaternions tridentes](dominios/)**: a mesma história contada em oito domínios de números (ℝ, ℝ², duais, complexos, dual-complexos, quaternions, dual quaternions, tridentes), cada um em quatro etapas: álgebra, sistemas de equações, EDOs e uma perseguição com Kalman. Domínios I a V (reais, vetores do plano, duais, complexos e dual-complexos) prontos; o domínio V tem ainda sete apêndices de aplicações.
 Comece pela raiz: [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/dominios/notebooks/X0_raiz.ipynb)
 
 ## Como as séries se ligam
