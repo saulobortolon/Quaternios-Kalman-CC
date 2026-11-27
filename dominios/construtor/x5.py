@@ -168,7 +168,7 @@ Pontes com a série Kalman (pasta `kalman/` do mesmo repositório):
 - o resultado de Barrau e Bonnabel visto na etapa (d) (o erro no mundo é invariante para medidas de pontos conhecidos, o erro no corpo para medidas de posição) é o que o {K5} discute em geral;
 - a $\\mathrm{{Exp}}$, o $\\boxplus$ multiplicativo e o colchete preparam a pose do quadrirrotor do {K6}, onde a rotação já não comuta.
 
-**Domínio anterior:** {link(arquivo("4"), "os números complexos")}. **Próximo domínio:** os quaternions, a rotação no espaço, onde a própria rotação deixa de comutar.
+**Domínio anterior:** {link(arquivo("4"), "os números complexos")}. **Próximo domínio:** {link(arquivo("6"), "os quaternions")}, a rotação no espaço, onde a própria rotação deixa de comutar.
 """)
 
 c.salva()

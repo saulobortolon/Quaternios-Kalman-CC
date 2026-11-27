@@ -18,7 +18,7 @@ A mesma história é contada em oito domínios de números, cada um mais rico qu
 | III | números duais | **pronto** |
 | IV | números complexos ℂ | **pronto** |
 | V | números dual-complexos | **pronto**, com sete apêndices |
-| VI | quaternions | em preparação |
+| VI | quaternions | **pronto**, com cinco apêndices |
 | VII | dual quaternions | em preparação |
 | VIII | quaternions tridentes | em preparação |
 
@@ -37,8 +37,10 @@ notebooks/     os notebooks, já executados (figuras e resultados incluídos)
 construtor/    o código que GERA os notebooks
   comum.py       funções comuns, lista de domínios e etapas, células de ferramentas
   x0.py, x1.py, ...    a raiz e o nó de cada domínio
-  x1a.py ... x5d.py    as folhas (domínio N, etapas a–d)
+  x1a.py ... x6d.py    as folhas (domínio N, etapas a–d)
   x5ap_*.py      os apêndices do domínio V (SLAM, quatro barras, carro, curling, RoboCup, estilingue, treliça)
+  x6ap_*.py      os apêndices do domínio VI (unwinding, qubit, bola que rola, realidade virtual, pingue-pongue)
+  dc_codigo.py, q_codigo.py   código comum dos domínios V e VI, inserido nas células
   build.py       gera e executa tudo:  python build.py   (ou  python build.py x1c  para um só)
 ```
 
