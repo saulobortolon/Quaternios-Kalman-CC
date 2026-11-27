@@ -317,7 +317,7 @@ c.md(r"""
 3. **O tipo de erro deve combinar com o sensor.** Medidas de pontos conhecidos vistos do corpo (faróis) combinam com o erro no mundo; medidas da posição do corpo no mundo (GPS) combinam com o erro no corpo. Com o par certo, o jacobiano da medida não depende da estimativa, e o filtro continua consistente mesmo começando muito longe da verdade. Com o par errado, a linearização em torno de uma estimativa ruim engana o filtro, nos primeiros segundos.
 4. **A não comutatividade obriga a escolher.** Nos domínios I a IV, "erro no corpo" e "erro no mundo" eram a mesma coisa. Aqui não são, e a escolha tem consequências.
 
-**Próximo domínio:** os quaternions. A orientação sai do plano e vai para o espaço: rotações em torno de qualquer eixo, que **não comutam** entre si (nem sem translação nenhuma), e um número de quatro componentes, de módulo 1, com o mesmo duplo recobrimento do dual-complexo.
+**Próximo domínio:** os quaternions (LINK_X6). A orientação sai do plano e vai para o espaço: rotações em torno de qualquer eixo, que **não comutam** entre si (nem sem translação nenhuma), e um número de quatro componentes, de módulo 1, com o mesmo duplo recobrimento do dual-complexo.
 
 ---
 ## 6. Exercícios
@@ -327,6 +327,6 @@ c.md(r"""
 3. **A elipse de Penélope.** Desenhe, em cada instante, a elipse de 95% da posição estimada de Penélope (o bloco $2\times2$ correspondente de $\mathbf P$). Quando ela encolhe e quando cresce?
 4. **SLAM com um farol desconhecido.** Acrescente ao estado a posição de um quinto farol, desconhecida. O filtro consegue estimá-la? Com qual dos três tipos de erro o filtro fica mais consistente? (É o problema do EKF-SLAM, em que o filtro invariante tem vantagem conhecida.)
 5. **O IEKF iterado.** Implemente a correção iterada (Gauss–Newton, notebook I(d)) com o erro no mundo. Ela ajuda com Pepé desorientado e o GPS?
-""")
+""".replace("LINK_X6", link(arquivo("6"), "nó do domínio VI")))
 
 c.salva()

@@ -366,7 +366,7 @@ As duas séries se ajudam nos dois sentidos:
 - a série *Domínios* dá a **base numérica** que esta série supõe sem dizer: ponto flutuante, condicionamento, Newton e Gauss–Newton, Runge–Kutta, discretização exata de $Q$;
 - esta série dá a **teoria dos filtros** que a etapa (d) de cada domínio usa em miniatura.
 
-Hoje estão prontos os domínios I (números reais), II (vetores do plano), III (números duais), IV (números complexos) e V (números dual-complexos, com sete apêndices); as linhas abaixo crescem com a série.
+Hoje estão prontos os domínios I (números reais), II (vetores do plano), III (números duais), IV (números complexos), V (números dual-complexos, com sete apêndices) e VI (quaternions, com cinco apêndices); as linhas abaixo crescem com a série.
 
 | notebook desta série | ponte na série *Domínios* | o que liga os dois |
 |---|---|---|
@@ -392,6 +392,10 @@ Hoje estão prontos os domínios I (números reais), II (vetores do plano), III 
 | 6 (integração no grupo, colchete de Lie) | [X5c](../../dominios/notebooks/X5c_dualcomplexos_edo.ipynb) ([Colab](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/dominios/notebooks/X5c_dualcomplexos_edo.ipynb)) | Magnus de ordem 4 precisa do colchete $[X_1,X_2]$; sem ele, cai para ordem 2; o RK4 nas componentes sai do grupo |
 | 1 (Gauss–Newton em lote) | [X5 apêndice slam](../../dominios/notebooks/X5_ap_slam.ipynb) ([Colab](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/dominios/notebooks/X5_ap_slam.ipynb)) | SLAM por grafo de poses: Gauss–Newton no grupo corrige o caminho inteiro quando o robô reconhece o ponto de partida |
 | 4 (várias hipóteses, vários alvos) | [X5 apêndice robocup](../../dominios/notebooks/X5_ap_robocup.ipynb) ([Colab](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/dominios/notebooks/X5_ap_robocup.ipynb)) | rastrear quatro alvos indistinguíveis: distância de Mahalanobis, janela de validação e o algoritmo húngaro |
+| 5 e 6 (ESKF e IEKF de atitude) | [X6d](../../dominios/notebooks/X6d_quaternions_perseguicao.ipynb) ([Colab](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/dominios/notebooks/X6d_quaternions_perseguicao.ipynb)) | a orientação da cabeça de Pepé por um celular: EKF aditivo, MEKF (erro no corpo), IEKF (erro no mundo) e Mahony; empatam perto da verdade, e o IEKF converge mais rápido de um rumo desconhecido |
+| 6 (integração de atitude, colchete de Lie) | [X6c](../../dominios/notebooks/X6c_quaternions_edo.ipynb) ([Colab](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/dominios/notebooks/X6c_quaternions_edo.ipynb)) | RK4 nas componentes, Magnus com e sem o colchete, o efeito Dzhanibekov e o erro de cone das centrais inerciais |
+| 1 e 6 (atitude por mínimos quadrados) | [X6b](../../dominios/notebooks/X6b_quaternions_sistemas.ipynb) ([Colab](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/dominios/notebooks/X6b_quaternions_sistemas.ipynb)) | o problema de Wahba como um autovetor 4×4 (Davenport), a covariância da atitude, o ICP 3D e a média de rotações |
+| 6 (predição de orientação) | [X6 apêndice vr](../../dominios/notebooks/X6_ap_vr.ipynb) ([Colab](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/dominios/notebooks/X6_ap_vr.ipynb)) | prever a orientação da cabeça 20 ms à frente com um filtro de Kalman de aceleração angular |
 """)
 
 md(r"""

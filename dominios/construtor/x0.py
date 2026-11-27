@@ -91,7 +91,7 @@ Em todos os domínios, o estado de um objeto em movimento vive num conjunto com 
 | duais | $(\theta+\delta_\theta)+\varepsilon(d+\delta_d)$ | RK4 | EKF com jacobianos por números duais |
 | ℂ | $z+\delta$ ou $z\,e^{i\delta}$ | RK4 = RKMK (comutativo) | EKF |
 | dual-complexos | $\hat z\,\mathrm{Exp}(\delta)$ ou $\mathrm{Exp}(\delta)\,\hat z$ | Magnus com colchete | ESKF e IEKF (erro no corpo e no mundo) |
-| quaternions | $q\otimes\mathrm{Exp}(\delta)$ | RKMK | ESKF |
+| quaternions | $q\otimes\mathrm{Exp}(\delta)$ ou $\mathrm{Exp}(\delta)\otimes q$ | Magnus com colchete (produto vetorial) | MEKF e IEKF (erro no corpo e no mundo) |
 | dual quaternions | $\hat q\otimes\mathrm{Exp}(\delta)$ | RKMK | ESKF |
 | tridentes | $\tilde q\otimes\mathrm{Exp}(\delta)$ | RKMK | ESKF tridente |
 """)

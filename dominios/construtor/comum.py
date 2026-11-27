@@ -25,7 +25,7 @@ DOMINIOS = [
     ("5", "dualcomplexos", "números dual-complexos", "SE(2) (posição e atitude no plano)",
      "barra ou carrinho no plano", "veículo no plano que persegue e aponta"),
     ("6", "quaternions", "quaternions", "SO(3) (atitude no espaço)",
-     "corpo girando livre (efeito da raquete de tênis)", "câmera que gira para manter o alvo centrado"),
+     "corpo girando livre (efeito Dzhanibekov)", "a orientação da cabeça de Pepé, por um celular preso ao capacete"),
     ("7", "dualquaternions", "dual quaternions", "SE(3) (pose no espaço)",
      "paralelepípedo lançado girando", "drone persegue drone"),
     ("8", "tridentes", "quaternions tridentes", "SE₂(3) (pose e velocidade no espaço)",
@@ -37,7 +37,7 @@ ETAPAS = [
     ("c", "edo", "cinemática e dinâmica: equações diferenciais"),
     ("d", "perseguicao", "perseguição com filtro de Kalman"),
 ]
-PRONTOS = {"1", "2", "3", "4", "5"}          # domínios já escritos
+PRONTOS = {"1", "2", "3", "4", "5", "6"}          # domínios já escritos
 
 def arquivo(dom=None, etapa=None):
     if dom is None:
@@ -56,6 +56,8 @@ APENDICES = {                                   # domínio → [(slug, título c
     "5": [("slam", "SLAM por grafo de poses"), ("quatrobarras", "quatro barras"), ("carro", "odometria de um carro"),
           ("curling", "curling"), ("robocup", "futebol de robôs"), ("estilingue", "estilingue gravitacional"),
           ("trelica", "treliça de ponte")],
+    "6": [("unwinding", "controle de atitude e unwinding"), ("qubit", "portas de um qubit"), ("bola", "a bola que rola"),
+          ("vr", "realidade virtual"), ("pingpong", "bola de pingue-pongue com efeito")],
 }
 
 def colab(arq):

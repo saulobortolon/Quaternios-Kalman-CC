@@ -4,7 +4,7 @@ AQUI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, AQUI)
 os.chdir(AQUI)
 
-TODOS = ["x1a", "x1b", "x1c", "x1d", "x1", "x2a", "x2b", "x2c", "x2d", "x2", "x3a", "x3b", "x3c", "x3d", "x3", "x4a", "x4b", "x4c", "x4d", "x4", "x5a", "x5b", "x5c", "x5d", "x5ap_slam", "x5ap_quatrobarras", "x5ap_carro", "x5ap_curling", "x5ap_robocup", "x5ap_estilingue", "x5ap_trelica", "x5", "x0"]   # a raiz por último: a verificação dela procura os outros
+TODOS = ["x1a", "x1b", "x1c", "x1d", "x1", "x2a", "x2b", "x2c", "x2d", "x2", "x3a", "x3b", "x3c", "x3d", "x3", "x4a", "x4b", "x4c", "x4d", "x4", "x5a", "x5b", "x5c", "x5d", "x5ap_slam", "x5ap_quatrobarras", "x5ap_carro", "x5ap_curling", "x5ap_robocup", "x5ap_estilingue", "x5ap_trelica", "x5", "x6a", "x6b", "x6c", "x6d", "x6ap_unwinding", "x6ap_qubit", "x6ap_bola", "x6ap_vr", "x6ap_pingpong", "x6", "x0"]   # a raiz por último: a verificação dela procura os outros
 alvo = sys.argv[1:] or TODOS
 executar = os.environ.get("EXECUTAR", "1") == "1"
 
