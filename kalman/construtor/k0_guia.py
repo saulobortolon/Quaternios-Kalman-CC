@@ -366,7 +366,7 @@ As duas séries se ajudam nos dois sentidos:
 - a série *Domínios* dá a **base numérica** que esta série supõe sem dizer: ponto flutuante, condicionamento, Newton e Gauss–Newton, Runge–Kutta, discretização exata de $Q$;
 - esta série dá a **teoria dos filtros** que a etapa (d) de cada domínio usa em miniatura.
 
-Hoje estão prontos os domínios I (números reais), II (vetores do plano) e III (números duais); as linhas abaixo crescem com a série.
+Hoje estão prontos os domínios I (números reais), II (vetores do plano), III (números duais) e IV (números complexos); as linhas abaixo crescem com a série.
 
 | notebook desta série | ponte na série *Domínios* | o que liga os dois |
 |---|---|---|
@@ -384,6 +384,9 @@ Hoje estão prontos os domínios I (números reais), II (vetores do plano) e III
 | 3 e 5 (jacobianos: à mão, diferenças finitas, passo complexo) | [X3a](../../dominios/notebooks/X3a_duais_algebra.ipynb) ([Colab](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/dominios/notebooks/X3a_duais_algebra.ipynb)), [X3b](../../dominios/notebooks/X3b_duais_sistemas.ipynb) ([Colab](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/dominios/notebooks/X3b_duais_sistemas.ipynb)) | números duais: a derivada exata de um programa, e jacobianos automáticos para Newton e Gauss–Newton |
 | 5 e 6 ($\boxplus$, $\boxminus$, estado de erro) | [X3d](../../dominios/notebooks/X3d_duais_perseguicao.ipynb) ([Colab](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/dominios/notebooks/X3d_duais_perseguicao.ipynb)) | o caso mais simples de um estado que não é vetor: o ângulo que dá a volta, com $\boxminus$ na inovação e no controle |
 | 6 (dual quaternions) | [X3a](../../dominios/notebooks/X3a_duais_algebra.ipynb) ([Colab](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/dominios/notebooks/X3a_duais_algebra.ipynb)), [X3c](../../dominios/notebooks/X3c_duais_edo.ipynb) ([Colab](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/dominios/notebooks/X3c_duais_edo.ipynb)) | o ângulo dual $\theta+\varepsilon d$, o parafuso e o princípio da transferência |
+| 3 e 5 (passo complexo) | [X4a](../../dominios/notebooks/X4a_complexos_algebra.ipynb) ([Colab](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/dominios/notebooks/X4a_complexos_algebra.ipynb)) | o passo complexo $\operatorname{Im}f(x+ih)/h$ ao lado dos números duais, e onde ele falha sem avisar |
+| 5 (ESKF: estado de erro, viés do giroscópio) | [X4c](../../dominios/notebooks/X4c_complexos_edo.ipynb) ([Colab](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/dominios/notebooks/X4c_complexos_edo.ipynb)), [X4d](../../dominios/notebooks/X4d_complexos_perseguicao.ipynb) ([Colab](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/dominios/notebooks/X4d_complexos_perseguicao.ipynb)) | o erro de orientação $\delta\psi$ com $q=\hat q\,e^{i\delta\psi}$, o viés estimado com faróis, e o $\boxplus$ multiplicativo |
+| 6 (integração de atitude) | [X4c](../../dominios/notebooks/X4c_complexos_edo.ipynb) ([Colab](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/dominios/notebooks/X4c_complexos_edo.ipynb)) | o RK4 encolhe um complexo unitário; o RKMK, que multiplica, fica no círculo |
 """)
 
 md(r"""

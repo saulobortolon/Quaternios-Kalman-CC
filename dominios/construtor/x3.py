@@ -121,7 +121,7 @@ Pontes com a série Kalman (pasta `kalman/` do mesmo repositório):
 - os jacobianos do {K3} foram conferidos lá por diferenças finitas e pelo passo complexo; aqui, os números duais dão o mesmo resultado, exato, sem passo;
 - o ângulo dual e o princípio da transferência preparam os dual quaternions do {K6}.
 
-**Domínio anterior:** {link(arquivo("2"), "ℝ², o plano")}. **Próximo domínio:** os números complexos, em que a rotação vira multiplicação por $e^{{i\\theta}}$, e o enrolamento desaparece da álgebra.
+**Domínio anterior:** {link(arquivo("2"), "ℝ², o plano")}. **Próximo domínio:** {link(arquivo("4"), "os números complexos")}, em que a rotação vira multiplicação por $e^{{i\\theta}}$, e o enrolamento desaparece da álgebra.
 """)
 
 c.salva()
