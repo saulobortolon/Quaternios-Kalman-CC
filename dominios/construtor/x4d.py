@@ -340,7 +340,7 @@ c.md(r"""
 4. **Sensores direcionais pedem comportamento ativo.** Com campo de visão limitado, a regra simples de girar no lugar para procurar evitou todas as perdas.
 5. **Multiplicativo ou aditivo, aqui tanto faz.** $U(1)$ é comutativo, e corrigir $\hat q$ por $e^{i\delta\psi}$ é o mesmo que somar $\delta\psi$ ao ângulo. No domínio V (posição e orientação juntas) e no VI (rotações no espaço), a ordem da composição importa, e só a forma multiplicativa é correta.
 
-**Próximo domínio:** os números dual-complexos. Juntando $i$ (rotação) e $\varepsilon$ (translação), um único número descreve a **pose** de um objeto no plano: onde ele está e para onde aponta. É Pepé inteiro, posição e nariz, num número só.
+**Próximo domínio:** os números dual-complexos (LINK_X5). Juntando $i$ (rotação) e $\varepsilon$ (translação), um único número descreve a **pose** de um objeto no plano: onde ele está e para onde aponta. É Pepé inteiro, posição e nariz, num número só.
 
 ---
 ## 9. Exercícios
@@ -350,6 +350,6 @@ c.md(r"""
 3. **Navegação proporcional.** Troque a regra de perseguição por $\omega=N\dot\lambda$, com $\lambda=\arg(\hat a-p)$ o ângulo da linha de visada e $N=3$ (a lei dos mísseis guiados). Calcule $\dot\lambda$ com a velocidade estimada de Penélope, em notação complexa: $\dot\lambda=\operatorname{Im}\big(\overline{r}\,\dot r\big)/\lvert r\rvert^2$, com $r=\hat a-p$. Pepé a alcança mais vezes?
 4. **Viés maior.** Com viés de 0,1 rad/s (quase 6°/s), o filtro conjunto ainda funciona? E com o viés inicial estimado errado (por exemplo, $\hat b_0=-0{,}1$)?
 5. **Campo de visão.** Reduza o campo de visão para $\pm30°$. Quanto tempo Pepé passa procurando? Os faróis continuam suficientes para o viés?
-""")
+""".replace("LINK_X5", link(arquivo("5"), "nó do domínio V")))
 
 c.salva()

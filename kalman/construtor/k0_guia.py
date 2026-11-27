@@ -366,7 +366,7 @@ As duas séries se ajudam nos dois sentidos:
 - a série *Domínios* dá a **base numérica** que esta série supõe sem dizer: ponto flutuante, condicionamento, Newton e Gauss–Newton, Runge–Kutta, discretização exata de $Q$;
 - esta série dá a **teoria dos filtros** que a etapa (d) de cada domínio usa em miniatura.
 
-Hoje estão prontos os domínios I (números reais), II (vetores do plano), III (números duais) e IV (números complexos); as linhas abaixo crescem com a série.
+Hoje estão prontos os domínios I (números reais), II (vetores do plano), III (números duais), IV (números complexos) e V (números dual-complexos, com sete apêndices); as linhas abaixo crescem com a série.
 
 | notebook desta série | ponte na série *Domínios* | o que liga os dois |
 |---|---|---|
@@ -387,6 +387,11 @@ Hoje estão prontos os domínios I (números reais), II (vetores do plano), III 
 | 3 e 5 (passo complexo) | [X4a](../../dominios/notebooks/X4a_complexos_algebra.ipynb) ([Colab](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/dominios/notebooks/X4a_complexos_algebra.ipynb)) | o passo complexo $\operatorname{Im}f(x+ih)/h$ ao lado dos números duais, e onde ele falha sem avisar |
 | 5 (ESKF: estado de erro, viés do giroscópio) | [X4c](../../dominios/notebooks/X4c_complexos_edo.ipynb) ([Colab](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/dominios/notebooks/X4c_complexos_edo.ipynb)), [X4d](../../dominios/notebooks/X4d_complexos_perseguicao.ipynb) ([Colab](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/dominios/notebooks/X4d_complexos_perseguicao.ipynb)) | o erro de orientação $\delta\psi$ com $q=\hat q\,e^{i\delta\psi}$, o viés estimado com faróis, e o $\boxplus$ multiplicativo |
 | 6 (integração de atitude) | [X4c](../../dominios/notebooks/X4c_complexos_edo.ipynb) ([Colab](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/dominios/notebooks/X4c_complexos_edo.ipynb)) | o RK4 encolhe um complexo unitário; o RKMK, que multiplica, fica no círculo |
+| 5 (ESKF e IEKF: onde fica o erro) | [X5d](../../dominios/notebooks/X5d_dualcomplexos_perseguicao.ipynb) ([Colab](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/dominios/notebooks/X5d_dualcomplexos_perseguicao.ipynb)) | a pose de Pepé com o erro nas coordenadas, no corpo e no mundo; com faróis, o erro no mundo (invariante) é consistente; com GPS e direção desconhecida, o erro no corpo |
+| 5 (incerteza que não é gaussiana) | [X5c](../../dominios/notebooks/X5c_dualcomplexos_edo.ipynb) ([Colab](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/dominios/notebooks/X5c_dualcomplexos_edo.ipynb)) | a banana da odometria: a incerteza fica mais perto de gaussiana nas coordenadas exponenciais que nas cartesianas |
+| 6 (integração no grupo, colchete de Lie) | [X5c](../../dominios/notebooks/X5c_dualcomplexos_edo.ipynb) ([Colab](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/dominios/notebooks/X5c_dualcomplexos_edo.ipynb)) | Magnus de ordem 4 precisa do colchete $[X_1,X_2]$; sem ele, cai para ordem 2; o RK4 nas componentes sai do grupo |
+| 1 (Gauss–Newton em lote) | [X5 apêndice slam](../../dominios/notebooks/X5_ap_slam.ipynb) ([Colab](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/dominios/notebooks/X5_ap_slam.ipynb)) | SLAM por grafo de poses: Gauss–Newton no grupo corrige o caminho inteiro quando o robô reconhece o ponto de partida |
+| 4 (várias hipóteses, vários alvos) | [X5 apêndice robocup](../../dominios/notebooks/X5_ap_robocup.ipynb) ([Colab](https://colab.research.google.com/github/saulobortolon/Quaternios-Kalman-CC/blob/main/dominios/notebooks/X5_ap_robocup.ipynb)) | rastrear quatro alvos indistinguíveis: distância de Mahalanobis, janela de validação e o algoritmo húngaro |
 """)
 
 md(r"""

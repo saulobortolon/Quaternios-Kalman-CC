@@ -49,7 +49,9 @@ A série é uma **árvore**: esta raiz (nível 0), um nó por domínio (nível I
 - **por linha** (um domínio inteiro, de (a) a (d)): é a ordem natural de uma primeira leitura;
 - **por coluna** (uma etapa através dos domínios): por exemplo, a coluna (c) mostra o Runge–Kutta virando RKMK, e a coluna (d) mostra o filtro de Kalman virando o ESKF.
 
-""" + "\n".join(linhas))
+""" + "\n".join(linhas) + "\n\n" + "\n".join(
+    f"**Apêndices do domínio {['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII'][int(d) - 1]}** (aplicações fora da sequência a–d): "
+    + " · ".join(f"[{t}]({apendice(d, s)})" for s, t in aps) for d, aps in APENDICES.items() if d in PRONTOS))
 
 esc = ["| | números | grupo de movimentos | exemplo físico (b, c) | perseguição (d) |", "|---|---|---|---|---|"]
 for cod, nome, numero, grupo, ex, pers in DOMINIOS:
@@ -88,7 +90,7 @@ Em todos os domínios, o estado de um objeto em movimento vive num conjunto com 
 | ℝ, ℝ² | $x+\delta$ | RK4 | KF, EKF, IEKF, filtro em grade |
 | duais | $(\theta+\delta_\theta)+\varepsilon(d+\delta_d)$ | RK4 | EKF com jacobianos por números duais |
 | ℂ | $z+\delta$ ou $z\,e^{i\delta}$ | RK4 = RKMK (comutativo) | EKF |
-| dual-complexos | $\hat z\,\mathrm{Exp}(\delta)$ | RKMK | ESKF |
+| dual-complexos | $\hat z\,\mathrm{Exp}(\delta)$ ou $\mathrm{Exp}(\delta)\,\hat z$ | Magnus com colchete | ESKF e IEKF (erro no corpo e no mundo) |
 | quaternions | $q\otimes\mathrm{Exp}(\delta)$ | RKMK | ESKF |
 | dual quaternions | $\hat q\otimes\mathrm{Exp}(\delta)$ | RKMK | ESKF |
 | tridentes | $\tilde q\otimes\mathrm{Exp}(\delta)$ | RKMK | ESKF tridente |
@@ -118,7 +120,8 @@ c.md(r"""
 """)
 
 lista = [(arquivo(),)] + [(arquivo(d[0]),) for d in DOMINIOS if d[0] in PRONTOS] + \
-        [(arquivo(d[0], e[0]),) for d in DOMINIOS if d[0] in PRONTOS for e in ETAPAS]
+        [(arquivo(d[0], e[0]),) for d in DOMINIOS if d[0] in PRONTOS for e in ETAPAS] + \
+        [(apendice(d, sl),) for d, aps in APENDICES.items() if d in PRONTOS for sl, _ in aps]
 c.code("import os\nfrom IPython.display import Markdown, display\nSERIE = " + repr([x[0] for x in lista]) + r'''
 linhas = ["| notebook | nesta pasta? |", "|---|---|"]
 for arq in SERIE:

@@ -126,7 +126,7 @@ Pontes com a série Kalman (pasta `kalman/` do mesmo repositório):
 - o estado de erro $\\delta\\psi$ com $q=\\hat q\\,e^{{i\\delta\\psi}}$ e o viés do giroscópio da etapa (d) são o ESKF do {K5} em uma dimensão de rotação;
 - o RK4 que encolhe a orientação e o RKMK que não encolhe preparam a integração de atitude com quaternions do {K6}.
 
-**Domínio anterior:** {link(arquivo("3"), "os números duais")}. **Próximo domínio:** os números dual-complexos, que juntam $i$ e $\\varepsilon$ para descrever a **pose** no plano: posição e orientação num número só.
+**Domínio anterior:** {link(arquivo("3"), "os números duais")}. **Próximo domínio:** {link(arquivo("5"), "os números dual-complexos")}, que juntam $i$ e $\\varepsilon$ para descrever a **pose** no plano: posição e orientação num número só.
 """)
 
 c.salva()
